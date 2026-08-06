@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Name Manager</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body onload="displayStudents()">
+
+<div class="container">
+    <h1>Student Name Manager</h1>
+
+    <div class="input-box">
+        <input type="text" id="studentName" placeholder="Enter student name">
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <h2>Total Students: <span id="count">0</span></h2>
+
+    <ul id="studentList"></ul>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
