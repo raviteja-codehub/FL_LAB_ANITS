@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ANITS Login</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1b2a3d, #2c3e50);
+    font-family: Arial, sans-serif;
+  }
+  .card {
+    width: 500px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+  }
+  .card h1 {
+    color: #e8e8e8;
+    margin-bottom: 30px;
+  }
+  .login-box {
+    background: #e6e6e6;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  .login-box h3 {
+    color: #1a3c6e;
+    margin-top: 0;
+  }
+  .login-box label {
+    display: block;
+    text-align: left;
+    color: #1a3c6e;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .login-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: #3b6ea5;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  #error {
+    color: red;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>ANITS - Central Placement Portal</h1>
+    <div class="login-box">
+      <h3>User Login</h3>
+      <form id="loginForm">
+        <label>Username</label>
+        <input type="text" id="username">
+        <label>Password</label>
+        <input type="password" id="password">
+        <button type="submit">Login</button>
+      </form>
+      <p id="error"></p>
+    </div>
+  </div>
+
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let user = document.getElementById("username").value.trim();
+    let pass = document.getElementById("password").value.trim();
+    let error = document.getElementById("error");
+
+    if (user === "" || pass === "") {
+      error.innerText = "Please fill both fields";
+      return;
+    }
+
+    if (user === "admin" && pass === "admin123") {
+      window.location.href = "sucess.html";
+    } else {
+      error.innerText = "Invalid username or password";
+    }
+  });
+</script>
+
+</body>
+</html>
