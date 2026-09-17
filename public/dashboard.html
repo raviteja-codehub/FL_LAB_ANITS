@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - FixApp</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">🔧 FixApp</div>
+    <div class="nav-links">
+      <span id="welcomeText"></span>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+
+  <section class="dashboard">
+    <h2>Book a Service</h2>
+    <p>Pick a service below and fill the quick booking form.</p>
+
+    <div class="service-grid clickable">
+      <div class="service-card" data-service="Plumber">🔧<span>Plumber</span></div>
+      <div class="service-card" data-service="Electrician">💡<span>Electrician</span></div>
+      <div class="service-card" data-service="Home Salon">💇<span>Home Salon</span></div>
+      <div class="service-card" data-service="Home Makeup">💄<span>Home Makeup</span></div>
+      <div class="service-card" data-service="Cleaning">🧹<span>Cleaning</span></div>
+      <div class="service-card" data-service="Laundry">🧺<span>Laundry</span></div>
+    </div>
+
+    <h3>My Bookings</h3>
+    <ul id="bookingsList" class="bookings-list"></ul>
+  </section>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalServiceTitle">Book Service</h3>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label>Preferred Date</label>
+          <input type="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <input type="time" name="time" required />
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <textarea name="address" rows="2" required></textarea>
+        </div>
+        <p id="bookingMessage" class="message"></p>
+        <div class="modal-buttons">
+          <button type="button" id="cancelBooking" class="btn btn-outline">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
