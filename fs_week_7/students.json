@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Ravi", "course": "Node.js", "year": 3 },
+  { "id": 2, "name": "Anil", "course": "React", "year": 2 },
+  { "id": 3, "name": "Sneha", "course": "Node.js", "year": 3 },
+  { "id": 4, "name": "Priya", "course": "MongoDB", "year": 4 },
+  { "id": 5, "name": "Kiran", "course": "Express.js", "year": 2 }
+]
